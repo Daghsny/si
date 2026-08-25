@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sti Hub - Profile</title>
+    <link rel="icon" type="image/x-icon" href="assets/stiLogo-01.png" />
+
+    <!-- Google Fonts: Bricolage Grotesque + Inter + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+
+  <body>
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+    <div class="app-container">
+      <!-- Sidebar Navigation -->
+      <nav class="sidebar">
+        <a href="index.html" class="nav-brand" title="Sti Hub">
+          <i class="ph-fill ph-student"></i>
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html" class="nav-link" id="nav-home" title="Home">
+            <i class="ph-bold ph-house"></i>
+          </a>
+          <a href="index.html" class="nav-link" title="Courses">
+            <i class="ph-bold ph-books"></i>
+          </a>
+          <a
+            href="calendar.html"
+            class="nav-link"
+            id="nav-calendar"
+            title="Calendar"
+          >
+            <i class="ph-bold ph-calendar-blank"></i>
+          </a>
+          <a
+            href="profile.html"
+            class="nav-link active"
+            id="nav-info"
+            title="About"
+          >
+            <i class="ph-bold ph-info"></i>
+          </a>
+        </div>
+      </nav>
+
+      <!-- View Container: Info (About Author) -->
+      <div
+        id="info-view"
+        class="view-container"
+        style="
+          grid-column: 2 / -1;
+          padding: var(--sp-lg) 2.5rem;
+          overflow-y: auto;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+        "
+      >
+        <header class="top-header" style="margin-bottom: 2.5rem">
+          <div class="mobile-header-row">
+            <div class="mobile-brand">
+              <button id="menu-toggle" class="menu-toggle">
+                <i class="ph-bold ph-list"></i>
+              </button>
+              <h1>Infos</h1>
+            </div>
+          </div>
+
+          <div class="header-banner">
+            <div class="header-titles">
+              <span class="ho-eyebrow">// À Propos</span>
+              <h1 class="ho-display" style="font-size: 2.3rem">
+                DAGHSNI <span class="ho-accent">Slaheddine.</span>
+              </h1>
+            </div>
+          </div>
+        </header>
+
+        <div
+          class="profile-card"
+          style="
+            padding: 3rem 2.5rem;
+            max-width: 580px;
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+          "
+        >
+          <div
+            class="profile-image"
+            style="margin-bottom: 1.5rem; display: inline-block"
+          >
+            <img
+              src="assets/author.png"
+              alt="Author"
+              style="
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+          </div>
+
+          <h2 style="font-size: 2rem; margin-bottom: 0.35rem; color: #ffffff">
+            The Author
+          </h2>
+          <p
+            class="ho-mono"
+            style="
+              color: var(--accent-purple-light);
+              font-size: 0.95rem;
+              margin-bottom: 1.5rem;
+            "
+          >
+            Full Stack Developer & UI/UX Enthusiast
+          </p>
+
+          <p
+            style="
+              color: var(--text-secondary);
+              line-height: 1.7;
+              margin-bottom: 2rem;
+              font-size: 1rem;
+              text-align: center;
+              background: rgba(255, 255, 255, 0.02);
+              padding: 1.5rem;
+              border-radius: var(--br-md);
+              border: 1px solid var(--border-subtle);
+            "
+          >
+            Hello! I built this platform to make learning accessible and
+            beautiful. I'm passionate about clean code, modern design, and
+            creating seamless user experiences.
+          </p>
+
+          <div
+            class="social-links"
+            style="
+              display: flex;
+              gap: 0.75rem;
+              justify-content: center;
+              flex-wrap: wrap;
+            "
+          >
+            <button class="ho-btn-ghost" style="padding: 0.6rem 1.25rem">
+              <i class="ph-bold ph-github-logo"></i>
+              <span>GitHub</span>
+            </button>
+            <button class="ho-btn-ghost" style="padding: 0.6rem 1.25rem">
+              <i class="ph-bold ph-linkedin-logo"></i>
+              <span>LinkedIn</span>
+            </button>
+            <button class="ho-btn-primary" style="padding: 0.6rem 1.25rem">
+              <i class="ph-bold ph-envelope"></i>
+              <span>Contact</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/mobile_menu.js"></script>
+  </body>
+</html>

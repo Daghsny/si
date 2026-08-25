@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sti Hub</title>
+<link rel="icon" type="image/x-icon" href="assets/stiLogo-01.png" />    
+    <!-- Google Fonts: Bricolage Grotesque + Inter + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <a href="index.html" class="nav-brand" title="Sti Hub">
+                <i class="ph-fill ph-student"></i>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" id="nav-home" title="Home">
+                    <i class="ph-bold ph-house"></i>
+                </a>
+                <a href="index.html" class="nav-link active" title="Courses">
+                    <i class="ph-bold ph-books"></i>
+                </a>
+                <a href="calendar.html" class="nav-link" id="nav-calendar" title="Calendar">
+                    <i class="ph-bold ph-calendar-blank"></i>
+                </a>
+                <a href="profile.html" class="nav-link" id="nav-info" title="About">
+                    <i class="ph-bold ph-info"></i>
+                </a>
+            </div>
+
+            <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.5rem; align-items: center;">
+                <!-- Additional footer icon if needed -->
+            </div>
+        </nav>
+
+        <!-- View Container: Dashboard -->
+        <div id="dashboard-view" style="display: contents;">
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <header class="top-header">
+                    <div class="mobile-header-row">
+                        <div class="mobile-brand">
+                            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Navigation">
+                                <i class="ph-bold ph-list"></i>
+                            </button>
+                            <h1>Sti <span class="momo-signature-regular">hub</span></h1>
+                        </div>
+                    </div>
+
+                    <div class="header-banner">
+                        <div class="header-titles">
+                            <span class="ho-eyebrow">// By Daghsny | Argoub 6080</span>
+                            <h1 class="ho-display" style="font-size: 2.3rem;">
+                                Mes <span class="ho-accent">Cours.</span>
+                            </h1>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Categories Filter -->
+                <section class="categories-section" aria-label="Categories">
+                    <div class="category-chip active" data-filter="all">
+                        <i class="ph-fill ph-squares-four"></i>
+                        <span>All</span>
+                    </div>
+                    <div class="category-chip" data-filter="Cours">
+                        <i class="ph-fill ph-book-open"></i>
+                        <span>Cours</span>
+                    </div>
+                    <div class="category-chip" data-filter="TP">
+                        <i class="ph-fill ph-code"></i>
+                        <span>TP</span>
+                    </div>
+                    <div class="category-chip" data-filter="Examen Bac">
+                        <i class="ph-fill ph-cube"></i>
+                        <span>Examen Bac</span>
+                    </div>
+                    <div class="category-chip" data-filter="Quizz">
+                        <i class="ph-fill ph-question"></i>
+                        <span>Quizz</span>
+                    </div>
+                    <div class="category-chip" data-filter="Annexe">
+                        <i class="ph-fill ph-paperclip"></i>
+                        <span>Annexe</span>
+                    </div>
+                    <div class="category-chip" data-filter="Repository">
+                        <i class="ph-fill ph-hard-drives"></i>
+                        <span>Repository</span>
+                    </div>
+                </section>
+
+                <div class="content-grid-label">
+                    <h2>
+                        <i class="ph-bold ph-sparkle" style="color: var(--accent-purple-light); font-size: 1.25rem;"></i>
+                        <span>Cours récent </span>
+                    </h2>
+                </div>
+
+                <!-- Courses Grid -->
+                <div class="courses-grid" id="coursesGrid">
+                    <!-- Javascript will populate this -->
+                </div>
+            </main>
+
+            <!-- Right Panel (Recently Added) -->
+            <aside class="right-panel">
+                <div class="panel-header">
+                    <h3>
+                        <i class="ph-bold ph-clock-counter-clockwise" style="color: var(--accent-purple-light);"></i>
+                        <span>Recently Added</span>
+                    </h3>
+                </div>
+
+                <div class="activity-card">
+                    <div class="my-courses-section" id="recentFilesList">
+                        <!-- JS Injected List -->
+                    </div>
+                </div>
+            </aside>
+        </div> <!-- End Dashboard View -->
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="courseModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon" id="modalIcon"></div>
+                <h2 id="modalTitle">Course Title</h2>
+                <span id="modalType" class="ho-badge ho-badge-free" style="display:inline-flex; margin-top:0.5rem;">Type</span>
+            </div>
+            <div class="modal-body">
+                <p><strong>Category:</strong> <span id="modalCategory" style="color: var(--accent-purple-light);"></span></p>
+                <p id="modalDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="modal-actions">
+                <button class="btn-secondary" id="cancelModal">Save for Later</button>
+                <button class="btn-primary" id="modalActionBtn">Start Learning</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/mobile_menu.js"></script>
+</body>
+
+</html>
