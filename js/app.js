@@ -498,7 +498,7 @@ function renderCourses(courses) {
                 <div class="ws-date-group">
                     <div class="ws-date-pill">
                         <i class="ph-bold ph-calendar-blank"></i>
-                        <span>Ajouter le : ${course.dateAdded}</span>
+                        <span>${course.dateAdded}</span>
                     </div>
                 </div>
                 <div style="display: flex; gap: 0.6rem; align-items: center;">
