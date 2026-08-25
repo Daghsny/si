@@ -472,7 +472,9 @@ function renderCourses(courses) {
 
         card.innerHTML = `
             <!-- Top Metadata Row -->
-             <!-- Tags Row -->
+            
+
+            <!-- Tags Row -->
             <div class="ws-tags-row">
                 <span class="ho-badge ho-badge-free">
                     <i class="ph-fill ${course.icon}"></i> ${course.category}
@@ -498,27 +500,9 @@ function renderCourses(courses) {
                 <div class="ws-date-group">
                     <div class="ws-date-pill">
                         <i class="ph-bold ph-calendar-blank"></i>
-                        <span>${course.dateAdded}</span>
+                        <span>Ajouter le : ${course.dateAdded}</span>
                     </div>
                 </div>
-                <div style="display: flex; gap: 0.6rem; align-items: center;">
-                  
-                    <button class="ho-btn-primary" onclick="event.stopPropagation(); window.location.href='content.html?id=${course.id}';">
-                        <span>Détails </span>
-                        <i class="ph-bold ph-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
-            ` : ''}
-
-            <!-- Title -->
-            <h3 class="ws-title">${course.title}</h3>
-
-            <!-- Action Bar -->
-            <div class="ws-actions-row">
-                <span class="ws-students-count">
-                    <i class="ph-bold ph-users"></i> ${course.students}
-                </span>
                 <div style="display: flex; gap: 0.6rem; align-items: center;">
                   
                     <button class="ho-btn-primary" onclick="event.stopPropagation(); window.location.href='content.html?id=${course.id}';">
