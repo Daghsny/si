@@ -472,24 +472,14 @@ function renderCourses(courses) {
 
         card.innerHTML = `
             <!-- Top Metadata Row -->
-            <div class="ws-meta-row">
-                <div class="ws-date-group">
-                    <div class="ws-date-pill">
-                        <i class="ph-bold ph-calendar-blank"></i>
-                        <span>Ajouter le : ${course.dateAdded}</span>
-                    </div>
-                </div>
-                <span class="ws-countdown-badge">${course.id}</span>
-            </div>
-
-            <!-- Tags Row -->
+             <!-- Tags Row -->
             <div class="ws-tags-row">
                 <span class="ho-badge ho-badge-free">
                     <i class="ph-fill ${course.icon}"></i> ${course.category}
                 </span>
                 
                 <span class="ho-badge ho-badge-rating">
-                    <i class="ph-fill ph-star"></i> ${course.rating}
+                    <i class="ph-fill ph-star"></i> 
                 </span>
             </div>
 
@@ -498,6 +488,27 @@ function renderCourses(courses) {
                 <div class="course-thumbnail-wrapper" style="border-radius: var(--br-md); overflow: hidden; height: 140px; border: 1px solid var(--border-subtle);">
                     <img src="${course.thumbnail}" alt="${course.title}" style="width: 100%; height: 100%; object-fit: cover;" class="course-thumb" loading="lazy">
                 </div>
+            ` : ''}
+
+            <!-- Title -->
+            <h3 class="ws-title">${course.title}</h3>
+
+            <!-- Action Bar -->
+            <div class="ws-actions-row">
+                <div class="ws-date-group">
+                    <div class="ws-date-pill">
+                        <i class="ph-bold ph-calendar-blank"></i>
+                        <span>Ajouter le : ${course.dateAdded}</span>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.6rem; align-items: center;">
+                  
+                    <button class="ho-btn-primary" onclick="event.stopPropagation(); window.location.href='content.html?id=${course.id}';">
+                        <span>Détails </span>
+                        <i class="ph-bold ph-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
             ` : ''}
 
             <!-- Title -->
