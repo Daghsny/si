@@ -557,7 +557,7 @@ function renderContentDetail(id) {
             <h2 class="ho-display" style="font-size: 2rem; margin-top: 0.5rem; color: #fff;">${course.title}</h2>
             <p style="color: var(--text-secondary); margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.85rem;">
                 
-               Ajoutée le : <strong style="color: #fff;">${course.dateAdded}</strong>
+               Ajoutée le : <br><strong style="color: #fff;">${course.dateAdded}</strong>
             </p>
         </div>
         
