@@ -560,21 +560,7 @@ function renderContentDetail(id) {
             </p>
         </div>
         
-        <div class="detail-body" style="line-height: 1.7; color: var(--text-secondary); margin-bottom: 2rem;">
-            <div class="ws-takeaways" style="margin-bottom: 1.5rem; padding: 1.25rem;">
-                
-                <p>
-                 <span class="ws-takeaways-label">À Propos</span>
-                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 0.75rem;">
-
-Apprenez efficacement grâce à notre module <strong>${course.title}</strong> qui couvre tous les sujets essentiels pour vous aider à maîtriser la matière.
-                </p>
-                <div class="ws-takeaway-item">
-                    <span class="ws-check-icon">✓</span>
-                    <span>Rejoindre les <strong>${course.students}</strong> qui apprennent déjà grâce à ce matériel.</span>
-                </div>
-            </div>
-        </div>
+        
         
         <div class="detail-actions" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
             <button class="ho-btn-primary" onclick="window.open('${course.pdfUrl}', '_blank')" style="min-width: 180px;">
