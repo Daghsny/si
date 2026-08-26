@@ -556,7 +556,7 @@ function renderContentDetail(id) {
             </div>
             <h2 class="ho-display" style="font-size: 2rem; margin-top: 0.5rem; color: #fff;">${course.title}</h2>
             <p style="color: var(--text-secondary); margin-top: 0.5rem; font-family: var(--font-mono); font-size: 0.85rem;">
-                • Catégorie : <strong style="color: #fff;">${course.category}</strong> <br>
+                
                 • Ajoutée le : <strong style="color: #fff;">${course.dateAdded}</strong>
             </p>
         </div>
